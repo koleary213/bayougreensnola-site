@@ -84,7 +84,7 @@
     .service-desc li::before { content: '\2713'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
 
     /* === HOW IT WORKS === */
-    #how { background: var(--green); }
+    #how { background: var(--green-deep); }
     .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
     .step-card { text-align: center; padding: 2rem 1.4rem; }
     .step-num { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--green-deep); background: var(--gold); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; }
@@ -92,7 +92,7 @@
     .step-desc { font-size: 0.92rem; color: var(--text-muted); }
 
     /* === GALLERY === */
-    #gallery { background: var(--green-deep); }
+    #gallery { background: var(--green); }
     .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
     .gallery-tile { aspect-ratio: 4 / 3; border-radius: 8px; background: var(--green-alt); border: 1px dashed var(--green-line); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; color: var(--text-muted); }
     .gallery-tile .g-icon { font-size: 2rem; color: var(--gold); opacity: 0.9; }
@@ -113,6 +113,39 @@
     .contact-cta-box { background: var(--green-alt); border: 1px solid var(--green-line); border-radius: 10px; padding: 2.6rem; text-align: center; }
     .contact-cta-box h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #fff; font-size: 1.35rem; margin-bottom: 0.7rem; }
     .contact-cta-box p { color: var(--text-muted); margin-bottom: 1.6rem; }
+
+    /* === PACKAGES === */
+    #packages { background: var(--green); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 1.3rem; }
+    .price-card { background: var(--green-alt); border: 1px solid var(--green-line); border-radius: 10px; padding: 2rem 1.4rem 1.6rem; display: flex; flex-direction: column; text-align: center; position: relative; transition: transform 0.2s, border-color 0.2s; }
+    .price-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+    .price-card.featured { border-color: var(--gold); border-top: 3px solid var(--gold); box-shadow: 0 10px 34px rgba(0,0,0,0.28); }
+    .price-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--green-deep); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.28rem 0.85rem; border-radius: 20px; white-space: nowrap; }
+    .price-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.15rem; color: #fff; margin-bottom: 0.15rem; }
+    .price-holes { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; }
+    .price-amt { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 2.1rem; color: var(--gold); line-height: 1; }
+    .price-amt .sub { display: block; font-size: 0.72rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.01em; margin-top: 0.45rem; text-transform: none; font-family: 'Open Sans', sans-serif; }
+    .price-desc { font-size: 0.86rem; color: var(--text-muted); margin: 1.1rem 0 1.4rem; flex-grow: 1; }
+    .price-card .btn { width: 100%; font-size: 0.88rem; padding: 0.65rem 1rem; }
+    .pkg-includes { margin-top: 2.2rem; background: var(--green-deep); border: 1px solid var(--green-line); border-radius: 10px; padding: 1.5rem 1.8rem; text-align: center; color: var(--text-muted); font-size: 0.92rem; }
+    .pkg-includes strong { color: var(--gold); }
+    .addon-card { margin-top: 1.3rem; background: linear-gradient(135deg, var(--green-alt), var(--green-deep)); border: 1px solid var(--gold); border-radius: 10px; padding: 1.7rem 1.9rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.3rem; }
+    .addon-text h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #fff; font-size: 1.2rem; margin-bottom: 0.35rem; }
+    .addon-text h3 .tag { display: inline-block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); background: rgba(201,168,76,0.16); padding: 0.2rem 0.55rem; border-radius: 3px; vertical-align: middle; margin-left: 0.5rem; }
+    .addon-text p { color: var(--text-muted); font-size: 0.9rem; max-width: 560px; }
+    .addon-price { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 2rem; color: var(--gold); white-space: nowrap; }
+
+    /* === FAQ === */
+    #faq { background: var(--green-deep); }
+    .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.8rem; }
+    .faq-item { background: var(--green-alt); border: 1px solid var(--green-line); border-radius: 8px; overflow: hidden; }
+    .faq-item summary { cursor: pointer; list-style: none; padding: 1.05rem 1.4rem; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.98rem; color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; color: var(--gold); font-size: 1.5rem; font-weight: 700; line-height: 1; flex-shrink: 0; }
+    .faq-item[open] summary::after { content: '\2212'; }
+    .faq-item .faq-a { padding: 0 1.4rem 1.2rem; color: var(--text-muted); font-size: 0.93rem; }
+    .faq-item .faq-a a { color: var(--gold); }
+    .faq-item .faq-a a:hover { text-decoration: underline; }
 
     /* === FOOTER === */
     footer { background: var(--green-deep); border-top: 1px solid var(--green-line); padding: 2.2rem 1.5rem; text-align: center; color: #8fa595; font-size: 0.85rem; }
@@ -152,8 +185,9 @@
   </div>
   <div class="nav-links">
     <a href="#services">Courses</a>
+    <a href="#packages">Packages</a>
     <a href="#how">How It Works</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
     <a href="#" onclick="openModal(); return false;" class="nav-cta">&#9993; Message Us</a>
   </div>
@@ -236,6 +270,74 @@
   </div>
 </section>
 
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-label">Simple, Upfront Pricing</div>
+      <h2 class="section-title">Packages &amp; <span>Pricing</span></h2>
+      <div class="divider"></div>
+      <p class="section-sub">Pick a package or build your own. Every rental includes delivery, setup, and breakdown across Greater New Orleans &mdash; you just play.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="price-card">
+        <div class="price-name">Build-Your-Own</div>
+        <div class="price-holes">Any 1&ndash;18 Holes</div>
+        <div class="price-amt">$45<span class="sub">per hole + $225 setup<br>&mdash; design any custom course</span></div>
+        <p class="price-desc">The ultimate custom option. Choose exactly how many holes you want and we build a course to match. <em>(Example: 6 holes = $495.)</em></p>
+        <button class="btn btn-outline" onclick="openModal()">Build Your Course</button>
+      </div>
+
+      <div class="price-card">
+        <div class="price-name">The Backyard</div>
+        <div class="price-holes">3 Holes</div>
+        <div class="price-amt">$350<span class="sub">up to 3 hours of play</span></div>
+        <p class="price-desc">Perfect for smaller yards, kids' birthdays, and intimate get-togethers where space is tight.</p>
+        <button class="btn btn-outline" onclick="openModal()">Book This</button>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-badge">Most Popular</div>
+        <div class="price-name">The Classic</div>
+        <div class="price-holes">9 Holes</div>
+        <div class="price-amt">$575<span class="sub">up to 3 hours of play</span></div>
+        <p class="price-desc">Our crowd-pleaser &mdash; the right size for birthdays, company picnics, and block parties.</p>
+        <button class="btn" onclick="openModal()">Book This</button>
+      </div>
+
+      <div class="price-card">
+        <div class="price-name">The Grand</div>
+        <div class="price-holes">12 Holes</div>
+        <div class="price-amt">$700<span class="sub">up to 3 hours of play</span></div>
+        <p class="price-desc">More holes, more challenge, more flow &mdash; built for bigger parties and school events.</p>
+        <button class="btn btn-outline" onclick="openModal()">Book This</button>
+      </div>
+
+      <div class="price-card">
+        <div class="price-name">The Full Course</div>
+        <div class="price-holes">18 Holes</div>
+        <div class="price-amt">$875<span class="sub">up to 3 hours of play</span></div>
+        <p class="price-desc">The full experience for festivals, weddings, corporate events, and large crowds.</p>
+        <button class="btn btn-outline" onclick="openModal()">Book This</button>
+      </div>
+
+    </div>
+
+    <div class="pkg-includes">
+      <strong>Every package includes:</strong> delivery, professional setup &amp; breakdown across Greater New Orleans &middot; adult &amp; kid-size putters &middot; golf balls &middot; scorecards &amp; pencils &middot; up to 3 hours of play. A <strong>$100 deposit</strong> holds your date and applies to your total. Need more time? Add hours for <strong>$85/hour</strong>.
+    </div>
+
+    <div class="addon-card">
+      <div class="addon-text">
+        <h3>Custom Event Package <span class="tag">Add-On</span></h3>
+        <p>Make it unforgettable: a <strong>2 ft &times; 4 ft custom event banner</strong> plus <strong>30 custom-printed golf balls</strong> for your guests to keep. A perfect keepsake or party favor. Please order early &mdash; custom printing requires advance lead time.</p>
+      </div>
+      <div class="addon-price">+$175</div>
+    </div>
+  </div>
+</section>
+
 <!-- HOW IT WORKS -->
 <section id="how">
   <div class="section-inner">
@@ -285,6 +387,86 @@
       <div class="gallery-tile"><div class="g-icon">&#127942;</div><div class="g-label">Coming Soon</div></div>
     </div>
     <p class="gallery-note">Fresh photos from our courses are on the way. <strong>Follow us on Instagram &#64;bayougreensnola</strong> to see them first.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-label">Good to Know</div>
+      <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>What areas do you serve, and when are you available?</summary>
+        <div class="faq-a">We bring the course to you across Greater New Orleans &mdash; including New Orleans, Metairie, Kenner, and nearby communities &mdash; seven days a week. Planning something a little farther out? Just ask and we'll let you know if we can make it work.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can you set up indoors or outdoors?</summary>
+        <div class="faq-a">Both! Our courses work great in backyards, driveways, patios, and parks, or indoors in gyms, halls, and event spaces. We just need a reasonably flat, clean surface &mdash; grass, turf, concrete, and asphalt all work well (bare dirt doesn't).</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How much space do you need?</summary>
+        <div class="faq-a">As a rule of thumb, plan for about 4 ft &times; 10 ft per hole so players have room to move around each one. Layout is flexible &mdash; we can group the holes in one big area or spread them across rooms, hallways, or a yard. Tell us your space and we'll design the course to fit.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I choose which holes I get and how hard they are?</summary>
+        <div class="faq-a">Absolutely &mdash; and that's what makes us different. You pick how many holes and the difficulty mix: Par 3 (easy), Par 4 (medium), Par 5 (hard), and specialty trick holes. We help you design a course that's just right for your crowd &mdash; little kids, competitive coworkers, or wedding guests. Every Bayou Greens course is one of a kind.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How many holes can I get?</summary>
+        <div class="faq-a">Anywhere from 1 to 18 holes. Not sure what's right? A 9-hole course is our most popular for most parties, while 18 holes is great for festivals and large crowds. We'll help you choose.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What's included with a rental?</summary>
+        <div class="faq-a">Every package includes delivery, professional setup, and breakdown, plus adult and kid-size putters, golf balls, scorecards, and pencils &mdash; and up to 3 hours of play. You don't lift a finger.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is there an attendant during the event?</summary>
+        <div class="faq-a">Not at this time. We deliver and fully set up your course before the event and return afterward to break it all down &mdash; during your event, your group plays at its own pace. (An on-site attendant is something we may add down the road.)</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What kinds of events do you do?</summary>
+        <div class="faq-a">All kinds! Backyard and adult birthdays, corporate events and team-building, company picnics, weddings, festivals, school and church events, fundraisers, block parties, and HOA gatherings. Everyone loves mini golf.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is it fun for all ages?</summary>
+        <div class="faq-a">Yes &mdash; from about 3 to 103. We bring toddler, kid, and adult-size putters, and because you choose the difficulty mix, there's a hole for every skill level.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if it rains?</summary>
+        <div class="faq-a">Mini golf plays best in dry weather. If rain is in the forecast, we'll work with you on a plan &mdash; moving the course indoors or under cover where possible, or finding another date. We'll keep an eye on the forecast with you as your event approaches.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How far in advance should I book?</summary>
+        <div class="faq-a">The earlier the better, especially for weekend dates, which fill up fast. If you'd like custom-printed golf balls or a banner, please book with extra lead time so we can have them made.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I book, and how does the deposit work?</summary>
+        <div class="faq-a">Message us with your event date and details and we'll confirm availability and send a quote. A $100 deposit holds your date and is applied in full toward your total; the balance is due around your event. We're happy to invoice corporate and school clients.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I get custom golf balls for my event?</summary>
+        <div class="faq-a">Yes! Add our <a href="#packages">Custom Event Package</a> &mdash; a 2 ft &times; 4 ft event banner plus 30 custom-printed golf balls your guests can take home. It's a favorite for weddings, corporate events, and milestone parties. Just order early, since custom printing takes lead time.</div>
+      </details>
+
+    </div>
+    <p class="gallery-note" style="margin-top:1.8rem;">Still have a question? <a href="#" onclick="openModal(); return false;" style="color:var(--gold); font-weight:600;">Message us</a> &mdash; we're happy to help.</p>
   </div>
 </section>
 
