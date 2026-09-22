@@ -93,10 +93,11 @@
 
     /* === GALLERY === */
     #gallery { background: var(--green); }
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-    .gallery-tile { aspect-ratio: 4 / 3; border-radius: 8px; background: var(--green-alt); border: 1px dashed var(--green-line); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; color: var(--text-muted); }
-    .gallery-tile .g-icon { font-size: 2rem; color: var(--gold); opacity: 0.9; }
-    .gallery-tile .g-label { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; }
+    .masonry { display: flex; gap: 1rem; align-items: flex-start; }
+    .masonry .m-col { flex: 1; display: flex; flex-direction: column; gap: 1rem; }
+    .masonry img { width: 100%; display: block; border-radius: 10px; border: 1px solid rgba(201,168,76,0.3); box-shadow: 0 6px 18px rgba(0,0,0,0.2); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .masonry img:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(0,0,0,0.3); }
+    @media (max-width: 700px) { .masonry { flex-direction: column; } }
     .gallery-note { text-align: center; color: var(--text-muted); margin-top: 1.6rem; font-size: 0.95rem; }
     .gallery-note strong { color: var(--gold); }
 
@@ -372,13 +373,25 @@
       <h2 class="section-title">Course <span>Gallery</span></h2>
       <div class="divider"></div>
     </div>
-    <div class="gallery-grid">
-      <div class="gallery-tile"><div class="g-icon">&#9971;</div><div class="g-label">Coming Soon</div></div>
-      <div class="gallery-tile"><div class="g-icon">&#127881;</div><div class="g-label">Coming Soon</div></div>
-      <div class="gallery-tile"><div class="g-icon">&#9884;</div><div class="g-label">Coming Soon</div></div>
-      <div class="gallery-tile"><div class="g-icon">&#127942;</div><div class="g-label">Coming Soon</div></div>
+    <div class="masonry">
+      <div class="m-col">
+        <img src="flag.jpg" alt="Bayou Greens NOLA branded flag on a putting green" loading="lazy">
+        <img src="course.jpg" alt="Custom portable mini-golf course set up outdoors" loading="lazy">
+        <img src="lighthouse.jpg" alt="Lighthouse mini-golf hole with flag" loading="lazy">
+        <img src="caddie.jpg" alt="Putter caddie with clubs beside a mini-golf hole" loading="lazy">
+      </div>
+      <div class="m-col">
+        <img src="windmill.jpg" alt="Windmill obstacle mini-golf hole" loading="lazy">
+        <img src="ball-in-cup.jpg" alt="Bayou Greens NOLA branded golf ball in the cup" loading="lazy">
+        <img src="windmill-course.jpg" alt="Mini-golf hole with windmill and putting green" loading="lazy">
+      </div>
+      <div class="m-col">
+        <img src="green.jpg" alt="Portable putting green with flag" loading="lazy">
+        <img src="windmill-ball.jpg" alt="Windmill hole with golf ball in play" loading="lazy">
+        <img src="lighthouse-lane.jpg" alt="Lighthouse mini-golf hole on a green lane" loading="lazy">
+      </div>
     </div>
-    <p class="gallery-note">Fresh photos from our courses are on the way. <strong>Follow us on Instagram &#64;bayougreensnola</strong> to see them first.</p>
+    <p class="gallery-note">More course photos on the way. <strong>Follow us on Instagram &#64;bayougreensnola</strong> to see them first.</p>
   </div>
 </section>
 
