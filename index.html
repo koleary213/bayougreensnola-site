@@ -131,6 +131,15 @@
     .price-card .btn { width: 100%; font-size: 0.88rem; padding: 0.65rem 1rem; }
     .pkg-includes { margin-top: 2.2rem; background: var(--green-deep); border: 1px solid var(--green-line); border-radius: 10px; padding: 1.5rem 1.8rem; text-align: center; color: var(--text-muted); font-size: 0.92rem; }
     .pkg-includes strong { color: var(--gold); }
+    .price-factors { margin-top: 1.3rem; background: var(--green-deep); border: 1px solid var(--green-line); border-radius: 10px; padding: 1.5rem 1.8rem; color: var(--text-muted); font-size: 0.92rem; }
+    .price-factors h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #fff; font-size: 1.05rem; margin-bottom: 0.7rem; }
+    .price-factors ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.5rem 1.6rem; margin: 0 0 1rem; padding: 0; }
+    .price-factors li { position: relative; padding-left: 1.4rem; }
+    .price-factors li::before { content: '\2713'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+    .price-factors p { margin: 0; }
+    .price-factors strong { color: var(--gold); }
+    .addon-price { text-align: center; }
+    .addon-price .pre { display: block; font-size: 0.68rem; font-weight: 700; color: var(--text-muted); letter-spacing: 0.08em; margin-bottom: 0.3rem; text-transform: uppercase; font-family: 'Open Sans', sans-serif; }
     .addon-card { margin-top: 1.3rem; background: linear-gradient(135deg, var(--green-alt), var(--green-deep)); border: 1px solid var(--gold); border-radius: 10px; padding: 1.7rem 1.9rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.3rem; }
     .addon-text h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #fff; font-size: 1.2rem; margin-bottom: 0.35rem; }
     .addon-text h3 .tag { display: inline-block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); background: rgba(201,168,76,0.16); padding: 0.2rem 0.55rem; border-radius: 3px; vertical-align: middle; margin-left: 0.5rem; }
@@ -276,27 +285,19 @@
 <section id="packages">
   <div class="section-inner">
     <div class="section-head">
-      <div class="section-label">Simple, Upfront Pricing</div>
+      <div class="section-label">Transparent Starting Prices</div>
       <h2 class="section-title">Packages &amp; <span>Pricing</span></h2>
       <div class="divider"></div>
-      <p class="section-sub">Pick a package or build your own. Every rental includes delivery, setup, and breakdown across Greater New Orleans &mdash; you just play.</p>
+      <p class="section-sub">Prices shown are starting prices for a standard event at a home, yard, or similar location. Every rental includes delivery, setup, and breakdown across Greater New Orleans &mdash; you just play.</p>
     </div>
     <div class="pricing-grid">
-
-      <div class="price-card">
-        <div class="price-name">Build-Your-Own</div>
-        <div class="price-holes">Customizable</div>
-        <div class="price-amt">Custom Quote<span class="sub">designed around your event</span></div>
-        <p class="price-desc">The ultimate custom option. Choose exactly how many holes you want and we build a course to match &mdash; message us and we'll put together a quote.</p>
-        <button class="btn btn-outline" onclick="openModal()">Get a Quote</button>
-      </div>
 
       <div class="price-card">
         <div class="price-name">The Backyard</div>
         <div class="price-holes">3 Holes</div>
         <div class="price-amt"><span class="pre">Starting at</span>$400</div>
         <p class="price-desc">Perfect for smaller yards, kids' birthdays, and intimate get-togethers where space is tight.</p>
-        <button class="btn btn-outline" onclick="openModal()">Book This</button>
+        <button class="btn btn-outline" onclick="openModal()">Get My Quote</button>
       </div>
 
       <div class="price-card featured">
@@ -304,7 +305,7 @@
         <div class="price-holes">6 Holes</div>
         <div class="price-amt"><span class="pre">Starting at</span>$600</div>
         <p class="price-desc">Our crowd-pleaser &mdash; the right size for birthdays, company picnics, and block parties.</p>
-        <button class="btn" onclick="openModal()">Book This</button>
+        <button class="btn" onclick="openModal()">Get My Quote</button>
       </div>
 
       <div class="price-card">
@@ -312,7 +313,15 @@
         <div class="price-holes">9 Holes</div>
         <div class="price-amt"><span class="pre">Starting at</span>$800</div>
         <p class="price-desc">Our biggest course &mdash; great for bigger parties, school events, and corporate gatherings.</p>
-        <button class="btn btn-outline" onclick="openModal()">Book This</button>
+        <button class="btn btn-outline" onclick="openModal()">Get My Quote</button>
+      </div>
+
+      <div class="price-card">
+        <div class="price-name">Special Events &amp; Custom</div>
+        <div class="price-holes">Any Size &middot; Any Venue</div>
+        <div class="price-amt">Custom Quote<span class="sub">priced to your event</span></div>
+        <p class="price-desc">Weddings, corporate events, trade shows, multi-day rentals, or a fully custom course &mdash; tell us what you have in mind and we'll send an exact quote within 24 hours.</p>
+        <button class="btn btn-outline" onclick="openModal()">Request a Quote</button>
       </div>
 
     </div>
@@ -321,12 +330,23 @@
       <strong>Every package includes:</strong> delivery, professional setup &amp; breakdown across Greater New Orleans &middot; adult &amp; kid-size putters &middot; golf balls &middot; scorecards &amp; pencils.
     </div>
 
+    <div class="price-factors">
+      <h3>What can change your price</h3>
+      <ul>
+        <li>Number of holes and how long you need the course</li>
+        <li>Where it's going &mdash; convention centers and managed venues can add insurance, load-in, or handling requirements</li>
+        <li>Multi-day rentals</li>
+        <li>Custom branding, personalized holes, or printed golf balls</li>
+      </ul>
+      <p><strong>Weddings, corporate events, trade shows, and venue-managed events are often quoted individually.</strong> Message us your date and details and we'll send an exact quote within 24 hours.</p>
+    </div>
+
     <div class="addon-card">
       <div class="addon-text">
-        <h3>Custom Golf Balls <span class="tag">Add-On</span></h3>
-        <p>Make it unforgettable: <strong>custom-printed golf balls</strong> for your guests to keep &mdash; a perfect keepsake or party favor. Please order early &mdash; custom printing requires advance lead time.</p>
+        <h3>Custom Package <span class="tag">Add-On</span></h3>
+        <p>Make it yours: <strong>personalized holes</strong> with your names, logo, or colors, plus <strong>2 dozen custom-printed golf balls</strong> for your guests to keep. Need more balls, or just the balls? Ask us. Please order early &mdash; custom printing requires advance lead time.</p>
       </div>
-      <div class="addon-price">Ask Us</div>
+      <div class="addon-price"><span class="pre">Starting at</span>$200</div>
     </div>
   </div>
 </section>
@@ -431,6 +451,11 @@
       </details>
 
       <details class="faq-item">
+        <summary>Why do your prices say "starting at"?</summary>
+        <div class="faq-a">Our package prices are for a standard event at a home, yard, or similar location. Your exact price depends on the number of holes, how long you need the course, where it's going, and any extras like custom branding or printed golf balls. Venues such as convention centers can add their own requirements, and multi-day rentals are quoted separately. Message us your date and details and we'll send an exact quote within 24 hours &mdash; so you know the full price before you commit.</div>
+      </details>
+
+      <details class="faq-item">
         <summary>What's included with a rental?</summary>
         <div class="faq-a">Every package includes delivery, professional setup, and breakdown, plus adult and kid-size putters, golf balls, scorecards, and pencils. You don't lift a finger.</div>
       </details>
@@ -457,12 +482,12 @@
 
       <details class="faq-item">
         <summary>How do I book?</summary>
-        <div class="faq-a">Message us with your event date and details and we'll confirm availability and send a quote. We're happy to invoice corporate and school clients.</div>
+        <div class="faq-a">Message us with your event date and details and we'll confirm availability and send an exact quote within 24 hours. We're happy to invoice corporate and school clients.</div>
       </details>
 
       <details class="faq-item">
-        <summary>Can I get custom golf balls for my event?</summary>
-        <div class="faq-a">Yes! Add our <a href="#packages">Custom Event Package</a> &mdash; a 2 ft &times; 4 ft event banner plus 30 custom-printed golf balls your guests can take home. It's a favorite for weddings, corporate events, and milestone parties. Just order early, since custom printing takes lead time.</div>
+        <summary>Can I get custom golf balls or personalized holes?</summary>
+        <div class="faq-a">Yes! Add our <a href="#packages">Custom Package</a> &mdash; personalized holes with your names, logo, or colors plus 2 dozen custom-printed golf balls your guests can take home, starting at $200. It's a favorite for weddings, corporate events, and milestone parties. Just order early, since custom printing takes lead time.</div>
       </details>
 
     </div>
