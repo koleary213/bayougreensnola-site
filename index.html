@@ -72,7 +72,7 @@
     }
 
     /* === PHOTO STRIP (under hero) === */
-    #strip { background: var(--green); padding: 3rem 1.5rem 3.2rem; border-top: 2px solid var(--gold); }
+    #strip { background: var(--green-deep); padding: 3rem 1.5rem 3.2rem; border-top: 2px solid var(--gold); }
     .strip-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
     .strip-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; border: 1px solid rgba(201,168,76,0.45); box-shadow: 0 6px 18px rgba(0,0,0,0.25); }
     .strip-item figcaption { margin-top: 0.7rem; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-bright); }
@@ -93,17 +93,6 @@
     .section-sub { color: var(--text-muted); max-width: 640px; margin: 1.1rem auto 0; }
 
     /* === COURSES === */
-    #services { background: var(--green-deep); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-    .service-card { background: var(--green-alt); border: 1px solid var(--green-line); border-top: 3px solid var(--gold); border-radius: 8px; padding: 2.2rem; transition: border-color 0.2s, transform 0.2s; }
-    .service-card:hover { border-color: var(--gold); transform: translateY(-4px); }
-    .service-icon { font-size: 2rem; color: var(--gold); margin-bottom: 0.8rem; }
-    .service-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.25rem; color: #fff; margin-bottom: 0.5rem; }
-    .service-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-bright); background: rgba(8,30,16,0.5); border: 1px solid rgba(201,168,76,0.4); padding: 0.2rem 0.6rem; border-radius: 3px; margin-bottom: 0.9rem; }
-    .service-desc { font-size: 0.95rem; color: var(--text-muted); }
-    .service-desc ul { list-style: none; margin-top: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem; }
-    .service-desc li { display: flex; align-items: flex-start; gap: 0.6rem; color: var(--text); font-size: 0.9rem; }
-    .service-desc li::before { content: '\2713'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
 
     /* === HOW IT WORKS === */
     #how { background: var(--green-deep); }
@@ -212,30 +201,33 @@
 
     /* === ICONS (replace emoji) === */
     .ico { width: 1.05em; height: 1.05em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: -0.16em; margin-right: 0.45em; flex-shrink: 0; }
-    .service-icon { width: 54px; height: 54px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: rgba(201,168,76,0.14); border: 1px solid rgba(201,168,76,0.35); color: var(--gold-bright); margin-bottom: 1.1rem; font-size: 0; }
-    .service-icon .ico { width: 28px; height: 28px; margin: 0; }
     .contact-item-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: rgba(201,168,76,0.14); border: 1px solid rgba(201,168,76,0.35); color: var(--gold-bright); margin-top: 0; font-size: 0; }
     .contact-item-icon .ico { width: 22px; height: 22px; margin: 0; }
 
     /* === CREAM SECTIONS (alternating light bands) === */
     :root { --gold-dark: #7d5f0f; --ink: #1d3a27; --ink-soft: #4a5d4f; --paper: #fffdf5; --paper-line: #e3dbc2; }
-    #services.sec-cream, #how.sec-cream, #faq.sec-cream { background: var(--cream); color: var(--ink); }
+    #strip, #packages.sec-cream, #faq.sec-cream { background: var(--cream); color: var(--ink); }
+    #strip figcaption { color: var(--green); }
+    #strip .strip-item img { border-color: rgba(30,77,43,0.25); box-shadow: 0 6px 18px rgba(30,77,43,0.18); }
     .sec-cream .section-label { color: var(--gold-dark); }
     .sec-cream .section-title { color: var(--ink); }
     .sec-cream .section-title span { color: var(--gold-dark); }
     .sec-cream .divider { background: var(--gold); }
     .sec-cream .section-sub { color: var(--ink-soft); }
-    .sec-cream .service-card { background: var(--paper); border: 1px solid var(--paper-line); border-top: 3px solid var(--gold); box-shadow: 0 6px 18px rgba(30,77,43,0.08); }
-    .sec-cream .service-card:hover { border-color: var(--gold); box-shadow: 0 12px 28px rgba(30,77,43,0.14); }
-    .sec-cream .service-icon { background: rgba(30,77,43,0.09); border-color: rgba(30,77,43,0.22); color: var(--green); }
-    .sec-cream .service-title { color: var(--ink); }
-    .sec-cream .service-tag { color: var(--green); background: rgba(30,77,43,0.08); border-color: rgba(30,77,43,0.28); }
-    .sec-cream .service-desc { color: var(--ink-soft); }
-    .sec-cream .service-desc li { color: var(--ink); }
-    .sec-cream .service-desc li::before { color: var(--gold-dark); }
-    .sec-cream .step-num { background: var(--green); color: var(--gold-bright); }
-    .sec-cream .step-title { color: var(--ink); }
-    .sec-cream .step-desc { color: var(--ink-soft); }
+    .sec-cream .price-card { background: var(--paper); border-color: var(--paper-line); box-shadow: 0 6px 18px rgba(30,77,43,0.08); }
+    .sec-cream .price-card:hover { border-color: var(--gold); }
+    .sec-cream .price-card.featured { border-color: var(--gold); box-shadow: 0 12px 30px rgba(30,77,43,0.16); }
+    .sec-cream .price-name { color: var(--ink); }
+    .sec-cream .price-holes { color: var(--gold-dark); }
+    .sec-cream .price-amt { color: var(--green); }
+    .sec-cream .price-amt .sub, .sec-cream .price-amt .pre { color: var(--ink-soft); }
+    .sec-cream .price-desc { color: var(--ink-soft); }
+    .sec-cream .btn-outline { color: var(--green); border-color: var(--green); }
+    .sec-cream .btn-outline:hover { background: rgba(30,77,43,0.08); }
+    .sec-cream .pkg-includes, .sec-cream .price-factors { background: var(--paper); border-color: var(--paper-line); color: var(--ink-soft); }
+    .sec-cream .pkg-includes strong, .sec-cream .price-factors strong { color: var(--gold-dark); }
+    .sec-cream .price-factors h3 { color: var(--ink); }
+    .sec-cream .price-factors li::before { color: var(--gold-dark); }
     .sec-cream .faq-item { background: var(--paper); border-color: var(--paper-line); box-shadow: 0 2px 8px rgba(30,77,43,0.06); }
     .sec-cream .faq-item summary { color: var(--ink); }
     .sec-cream .faq-item summary::after { color: var(--gold-dark); }
@@ -252,10 +244,6 @@
   <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7.5 12 13.5l8.5-6"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></symbol>
   <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
-  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M7.5 20.5V3.5"/><path d="M7.5 4l10 3.6-10 3.6"/><ellipse cx="7.5" cy="20.5" rx="5" ry="1.7"/></symbol>
-  <symbol id="i-levels" viewBox="0 0 24 24"><path d="M5 20v-5M12 20v-9M19 20V5" stroke-width="2.6"/></symbol>
-  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7z"/><circle cx="7" cy="17.6" r="2"/><circle cx="17" cy="17.6" r="2"/></symbol>
-  <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="9" cy="9.6" r=".8" fill="currentColor" stroke="none"/><circle cx="13.4" cy="8.6" r=".8" fill="currentColor" stroke="none"/><circle cx="15.6" cy="12.4" r=".8" fill="currentColor" stroke="none"/><circle cx="11" cy="13.6" r=".8" fill="currentColor" stroke="none"/><circle cx="8.4" cy="14.6" r=".8" fill="currentColor" stroke="none"/><circle cx="14" cy="15.8" r=".8" fill="currentColor" stroke="none"/></symbol>
 </svg>
 
 <!-- NAV -->
@@ -265,9 +253,8 @@
     <span>BAYOU GREENS NOLA</span>
   </div>
   <div class="nav-links">
-    <a href="#services">Courses</a>
-    <a href="#packages">Packages</a>
     <a href="#how">How It Works</a>
+    <a href="#packages">Packages</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
     <a href="#" onclick="openModal(); return false;" class="nav-cta"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Message Us</a>
@@ -283,7 +270,7 @@
       <p class="hero-sub">Portable mini-golf for backyard parties, corporate events, weddings &amp; festivals. Build a custom course &mdash; 3, 6, or 9 holes, or a fully custom layout &mdash; delivered, set up, and broken down by our team. All you do is play.</p>
       <div class="btn-group">
         <button class="btn" onclick="openModal()"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Book Your Date</button>
-        <a href="#services" class="btn btn-outline">Build Your Course</a>
+        <a href="#packages" class="btn btn-outline">See Pricing</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -310,71 +297,42 @@
   </div>
 </section>
 
-<!-- COURSES -->
-<section id="services" class="sec-cream">
+<!-- HOW IT WORKS -->
+<section id="how">
   <div class="section-inner">
     <div class="section-head">
-      <div class="section-label">What We Offer</div>
-      <h2 class="section-title">Build Your <span>Course</span></h2>
+      <div class="section-label">Simple &amp; Stress-Free</div>
+      <h2 class="section-title">How It <span>Works</span></h2>
       <div class="divider"></div>
-      <p class="section-sub">Choose a 3-, 6-, or 9-hole course &mdash; or a fully custom layout &mdash; designed around your space, your crowd, and your event.</p>
+      <p class="section-sub">Every course is built unique to your event. We work with you to choose the best holes for your crowd &mdash; then handle everything else.</p>
     </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-flag"/></svg></div>
-        <span class="service-tag">Fully Custom</span>
-        <div class="service-title">3, 6, 9 or Custom</div>
-        <div class="service-desc">You choose how many holes and how they're arranged. From a quick 3-hole setup to a 9-hole course &mdash; or a fully custom layout &mdash; we build it to fit your event and your space.
-          <ul>
-            <li>3, 6, 9, or a custom number of holes</li>
-            <li>Any layout or combination</li>
-            <li>Sized to your venue</li>
-          </ul>
-        </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-title">We Design It Together</div>
+        <p class="step-desc">Tell us your event date, location, and who's coming. We help you build a course that's unique to your event &mdash; choosing the best holes for your crowd, whether it's kids, coworkers, or wedding guests.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-levels"/></svg></div>
-        <span class="service-tag">Something for Everyone</span>
-        <div class="service-title">Choose Your Challenge</div>
-        <div class="service-desc">Every hole has its own difficulty, so players of all ages and skill levels have a blast.
-          <ul>
-            <li>Par 3 &mdash; Easy</li>
-            <li>Par 4 &mdash; Medium</li>
-            <li>Par 5 &mdash; Hard</li>
-            <li>Specialty &mdash; Trick &amp; obstacle holes</li>
-          </ul>
-        </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-title">We Deliver &amp; Set Up</div>
+        <p class="step-desc">Our team arrives ahead of your event and builds your custom course &mdash; leveled, styled, and ready to play.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg></div>
-        <span class="service-tag">Always Included</span>
-        <div class="service-title">Full-Service Setup</div>
-        <div class="service-desc">Every rental is completely hands-off for you. We handle it all from start to finish &mdash; every single time.
-          <ul>
-            <li>Delivery to your location</li>
-            <li>Professional setup</li>
-            <li>Teardown &amp; haul-away</li>
-          </ul>
-        </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-title">You Play</div>
+        <p class="step-desc">Enjoy your event while guests tee off. No setup, no cleanup, no stress on your end.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-ball"/></svg></div>
-        <span class="service-tag">Add-On</span>
-        <div class="service-title">Custom Golf Balls</div>
-        <div class="service-desc">Make your event unforgettable with custom golf balls printed just for the occasion &mdash; a perfect keepsake or party favor.
-          <ul>
-            <li>Personalized for your event</li>
-            <li>Great giveaway or memento</li>
-            <li>Order early &mdash; requires lead time</li>
-          </ul>
-        </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-title">We Break It Down</div>
+        <p class="step-desc">When the fun wraps, we return to tear everything down and haul it away. Easy as that.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PACKAGES -->
-<section id="packages">
+<section id="packages" class="sec-cream">
   <div class="section-inner">
     <div class="section-head">
       <div class="section-label">Transparent Starting Prices</div>
@@ -438,40 +396,6 @@
         <p>Make it yours: <strong>personalized holes</strong> with your names, logo, or colors, plus <strong>2 dozen custom-printed golf balls</strong> for your guests to keep. Need more balls, or just the balls? Ask us. Please order early &mdash; custom printing requires advance lead time.</p>
       </div>
       <div class="addon-price"><span class="pre">Starting at</span>$200</div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how" class="sec-cream">
-  <div class="section-inner">
-    <div class="section-head">
-      <div class="section-label">Simple &amp; Stress-Free</div>
-      <h2 class="section-title">How It <span>Works</span></h2>
-      <div class="divider"></div>
-      <p class="section-sub">Every course is built unique to your event. We work with you to choose the best holes for your crowd &mdash; then handle everything else.</p>
-    </div>
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <div class="step-title">We Design It Together</div>
-        <p class="step-desc">Tell us your event date, location, and who's coming. We help you build a course that's unique to your event &mdash; choosing the best holes for your crowd, whether it's kids, coworkers, or wedding guests.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <div class="step-title">We Deliver &amp; Set Up</div>
-        <p class="step-desc">Our team arrives ahead of your event and builds your custom course &mdash; leveled, styled, and ready to play.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <div class="step-title">You Play</div>
-        <p class="step-desc">Enjoy your event while guests tee off. No setup, no cleanup, no stress on your end.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">4</div>
-        <div class="step-title">We Break It Down</div>
-        <p class="step-desc">When the fun wraps, we return to tear everything down and haul it away. Easy as that.</p>
-      </div>
     </div>
   </div>
 </section>
