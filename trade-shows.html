@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade Show Booth Mini-Golf in New Orleans | Bayou Greens NOLA</title>
+  <meta name="description" content="Give your trade show booth a reason to stop. Bayou Greens NOLA delivers and sets up branded portable mini-golf holes at New Orleans trade shows and conventions. Request a quote.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #1e4d2b; --green-deep: #143720; --green-alt: #235a36; --green-line: #37734b;
+      --gold: #c9a84c; --gold-bright: #e0c264; --gold-dark: #7d5f0f; --cream: #f5f0e1;
+      --paper: #fffdf5; --paper-line: #e3dbc2; --ink: #1d3a27; --ink-soft: #4a5d4f;
+      --text: #f0ede2; --text-muted: #c4d3c7;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--green); color: var(--text); font-family: 'Open Sans', sans-serif; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--green-deep); border-bottom: 2px solid var(--gold); padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-brand { display: flex; align-items: center; gap: 0.6rem; }
+    .nav-brand img { height: 46px; width: 46px; border-radius: 50%; background: var(--cream); }
+    .nav-brand span { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--gold); letter-spacing: 0.02em; }
+    .nav-cta { background: var(--gold); color: var(--green-deep); font-weight: 700; padding: 0.5rem 1.2rem; border-radius: 4px; font-size: 0.9rem; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--gold-bright); }
+    @media (max-width: 560px) { .nav-brand span { display: none; } }
+
+    .btn { display: inline-block; background: var(--gold); color: var(--green-deep); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; padding: 0.9rem 2rem; border-radius: 4px; border: none; cursor: pointer; transition: background 0.2s, transform 0.1s; text-align: center; }
+    .btn:hover { background: var(--gold-bright); transform: translateY(-1px); }
+
+    section { padding: 5rem 1.5rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-head { text-align: center; margin-bottom: 3rem; }
+    .section-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-bright); margin-bottom: 0.6rem; }
+    .section-title { font-family: 'Montserrat', sans-serif; font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 800; color: #fff; }
+    .section-title span { color: var(--gold-bright); }
+    .divider { width: 64px; height: 3px; background: var(--gold); border-radius: 2px; margin: 1rem auto 0; }
+    .section-sub { color: var(--text-muted); max-width: 640px; margin: 1.1rem auto 0; }
+
+    /* HERO */
+    #hero { padding: 4.5rem 1.5rem; background: linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%); position: relative; overflow: hidden; }
+    #hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 72% 45%, rgba(201,168,76,0.16) 0%, transparent 62%); pointer-events: none; }
+    .hero-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.05fr; gap: 3.2rem; align-items: center; position: relative; z-index: 1; }
+    .hero-eyebrow { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-bright); margin-bottom: 1rem; }
+    .hero-title { font-family: 'Montserrat', sans-serif; font-size: clamp(2.2rem, 4.6vw, 3.5rem); font-weight: 800; line-height: 1.12; margin-bottom: 1.4rem; color: #fff; }
+    .hero-title span { color: var(--gold-bright); }
+    .hero-sub { font-size: 1.1rem; color: var(--text-muted); margin: 0 0 2.2rem; max-width: 540px; }
+    .hero-note { margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted); }
+    .hero-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; border: 3px solid var(--gold); box-shadow: 0 20px 48px rgba(0,0,0,0.42); }
+    @media (max-width: 860px) {
+      #hero { padding: 2rem 1.2rem 3rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 1.8rem; text-align: center; }
+      .hero-photo { order: -1; }
+      .hero-photo img { aspect-ratio: 16 / 10; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
+    }
+
+    /* WHY (cream) */
+    #why { background: var(--cream); color: var(--ink); }
+    #why .section-label { color: var(--gold-dark); }
+    #why .section-title { color: var(--ink); }
+    #why .section-title span { color: var(--gold-dark); }
+    #why .section-sub { color: var(--ink-soft); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.6rem; }
+    .card { background: var(--paper); border: 1px solid var(--paper-line); border-top: 3px solid var(--gold); border-radius: 10px; overflow: hidden; box-shadow: 0 6px 18px rgba(30,77,43,0.08); }
+    .card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .card-body { padding: 1.5rem 1.6rem 1.8rem; }
+    .card h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--ink); margin-bottom: 0.5rem; }
+    .card p { color: var(--ink-soft); font-size: 0.96rem; }
+
+    /* HOW (dark) */
+    #how { background: var(--green-deep); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; }
+    .step { text-align: center; padding: 1.5rem 1.2rem; }
+    .step-num { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--green-deep); background: var(--gold); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; }
+    .step h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem; }
+    .step p { color: var(--text-muted); font-size: 0.94rem; }
+
+    /* FORM (cream) */
+    #quote { background: var(--cream); color: var(--ink); }
+    #quote .section-label { color: var(--gold-dark); }
+    #quote .section-title { color: var(--ink); }
+    #quote .section-title span { color: var(--gold-dark); }
+    #quote .section-sub { color: var(--ink-soft); }
+    .form-card { max-width: 760px; margin: 0 auto; background: var(--paper); border: 1px solid var(--paper-line); border-top: 3px solid var(--gold); border-radius: 12px; padding: 2.4rem; box-shadow: 0 10px 30px rgba(30,77,43,0.10); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .form-card { padding: 1.5rem 1.2rem; } }
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label, .form-group .lbl { display: block; font-size: 0.88rem; font-weight: 700; color: var(--ink); margin-bottom: 0.4rem; }
+    .form-group .opt { font-weight: 400; color: var(--ink-soft); }
+    .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], .form-group select, .form-group textarea { width: 100%; background: #fff; border: 1px solid #cfc6a8; border-radius: 6px; color: var(--ink); font-family: 'Open Sans', sans-serif; font-size: 1rem; padding: 0.75rem 0.9rem; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: 2px solid var(--green); outline-offset: 1px; border-color: var(--green); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .checks { display: flex; flex-direction: column; gap: 0.55rem; }
+    .checks label { display: flex; align-items: center; gap: 0.6rem; font-weight: 400; font-size: 0.96rem; color: var(--ink); margin: 0; cursor: pointer; }
+    .checks input { width: 18px; height: 18px; accent-color: var(--green); }
+    .hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+    .form-submit { width: 100%; font-size: 1.05rem; margin-top: 0.4rem; background: var(--green); color: #fff; }
+    .form-submit:hover { background: var(--green-alt); }
+    .form-fine { margin-top: 1rem; text-align: center; font-size: 0.85rem; color: var(--ink-soft); }
+    .form-success { display: none; text-align: center; padding: 2.4rem 0.5rem; }
+    .form-success .fs-check { font-size: 2.6rem; color: var(--gold-dark); }
+    .form-success h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; color: var(--ink); margin: 0.6rem 0; }
+    .form-success p { color: var(--ink-soft); }
+
+    footer { background: var(--green-deep); border-top: 1px solid var(--green-line); padding: 2.2rem 1.5rem; text-align: center; color: #b4c6b9; font-size: 0.9rem; }
+    footer a { color: var(--gold-bright); text-decoration: underline; text-underline-offset: 3px; }
+    footer p + p { margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="https://bayougreensnola.com/">
+    <img src="logo.png" alt="Bayou Greens NOLA logo">
+    <span>BAYOU GREENS NOLA</span>
+  </a>
+  <a href="#quote" class="nav-cta">Get My Quote</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">Trade Shows &amp; Conventions &middot; New Orleans</div>
+      <h1 class="hero-title">Give your booth a <span>reason to stop.</span></h1>
+      <p class="hero-sub">Branded portable mini-golf holes for your trade show booth. Our New Orleans team delivers, sets up, checks the holes each day, and tears down, so your staff can focus on the conversations.</p>
+      <a href="#quote" class="btn">Get My Quote</a>
+      <p class="hero-note">Tell us about your booth. Your quote comes within 24 hours.</p>
+    </div>
+    <div class="hero-photo">
+      <img src="lane.jpg" alt="Portable mini-golf lane with a diamond bumper obstacle and flag">
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-label">Why Exhibitors Book Us</div>
+      <h2 class="section-title">A booth people <span>walk toward</span></h2>
+      <div class="divider"></div>
+      <p class="section-sub">Everyone on the show floor has a banner. Few have something attendees want to try.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="two-lanes.jpg" alt="Two portable mini-golf lanes set up on a patio" loading="lazy">
+        <div class="card-body">
+          <h3>Draws a crowd</h3>
+          <p>A putting challenge is easy to understand at a glance and fun for all ages, so people stop, play, and stick around to talk.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="flag-ball.jpg" alt="Golf ball at the cup beside a Bayou Greens NOLA flag" loading="lazy">
+        <div class="card-body">
+          <h3>Carries your brand</h3>
+          <p>Put your logo on the hole flags and add custom-printed golf balls that visitors take home.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="diamond-flag.jpg" alt="Flag over a mini-golf hole with a diamond bumper obstacle" loading="lazy">
+        <div class="card-body">
+          <h3>Zero hassle for your team</h3>
+          <p>We handle delivery, setup, daily hole checks, and teardown. Tell us your show and booth size and we will confirm what the show requires.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-label">Simple &amp; Stress-Free</div>
+      <h2 class="section-title">How It <span>Works</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Tell us about your booth</h3>
+        <p>Share the show, dates, and booth size in the short form below.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Get your quote</h3>
+        <p>We recommend the number of holes for your space and send a quote within 24 hours.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>We set it all up</h3>
+        <p>We deliver, install, and check the holes each day, then break everything down at the end of the show.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section id="quote">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-label">Free, No-Obligation Quote</div>
+      <h2 class="section-title">Request your <span>booth quote</span></h2>
+      <div class="divider"></div>
+      <p class="section-sub">It takes about two minutes. The more you tell us, the more accurate your quote.</p>
+    </div>
+
+    <div class="form-card">
+      <form id="quoteForm" action="https://formspree.io/f/xeebrvvv" method="POST">
+        <input type="hidden" name="_subject" value="Trade show booth quote request">
+        <input type="hidden" name="source" value="Trade show landing page">
+        <input type="hidden" name="utm_source" id="utm_source">
+        <input type="hidden" name="utm_medium" id="utm_medium">
+        <input type="hidden" name="utm_campaign" id="utm_campaign">
+        <input type="hidden" name="addons" id="addons">
+        <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" autocomplete="organization" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone <span class="opt">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="show">Show or event name</label>
+          <input type="text" id="show" name="show_name" placeholder="Name of the trade show or conference" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="venue">Venue</label>
+            <select id="venue" name="venue">
+              <option>Ernest N. Morial Convention Center</option>
+              <option>Another New Orleans venue</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dates">Show dates <span class="opt">(include setup and teardown if known)</span></label>
+            <input type="text" id="dates" name="show_dates" placeholder="e.g. Jan 17-21, 2027" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="booth">Booth size <span class="opt">(optional)</span></label>
+            <input type="text" id="booth" name="booth_size" placeholder="e.g. 20 x 20 ft">
+          </div>
+          <div class="form-group">
+            <label for="holes">Number of holes</label>
+            <select id="holes" name="holes">
+              <option>Not sure, recommend for my booth</option>
+              <option>1 hole</option>
+              <option>2 holes</option>
+              <option>3 holes</option>
+              <option>4 or more holes</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <span class="lbl">Options you are interested in <span class="opt">(optional)</span></span>
+          <div class="checks" id="addonChecks">
+            <label><input type="checkbox" value="Logo on hole flags"> Logo on hole flags</label>
+            <label><input type="checkbox" value="Custom-printed golf balls"> Custom-printed golf balls</label>
+            <label><input type="checkbox" value="On-site attendant"> On-site attendant</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="notes">Anything else we should know? <span class="opt">(optional)</span></label>
+          <textarea id="notes" name="message" placeholder="Show requirements, goals for the booth, deadlines..."></textarea>
+        </div>
+        <button type="submit" class="btn form-submit">Send My Quote Request</button>
+        <p class="form-fine">We reply within 24 hours. Prefer to talk? Message us at hello@bayougreensnola.com or 504-655-5726.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="fs-check">&#10003;</div>
+        <h3>Thank you! Your request is in.</h3>
+        <p>We will send your quote within 24 hours. If your show is coming up fast, email hello@bayougreensnola.com so we can prioritize it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Bayou Greens NOLA &middot; Custom portable mini-golf &middot; New Orleans, LA</p>
+  <p><a href="https://bayougreensnola.com/">bayougreensnola.com</a> &middot; <a href="mailto:hello@bayougreensnola.com">hello@bayougreensnola.com</a> &middot; 504-655-5726</p>
+  <p>&copy; <span id="yr"></span> Bayou Greens NOLA. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Carry ad tracking (utm) values into the form so each lead shows where it came from
+  try {
+    var params = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+      var v = params.get(k); if (v) document.getElementById(k).value = v;
+    });
+  } catch (e) {}
+
+  var form = document.getElementById('quoteForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var picked = [];
+    document.querySelectorAll('#addonChecks input:checked').forEach(function (c) { picked.push(c.value); });
+    document.getElementById('addons').value = picked.join(', ') || 'None selected';
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true; btn.textContent = 'Sending...';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function (resp) {
+        if (resp.ok) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          btn.disabled = false; btn.textContent = 'Send My Quote Request';
+          alert('There was a problem sending your request. Please email hello@bayougreensnola.com directly.');
+        }
+      })
+      .catch(function () {
+        btn.disabled = false; btn.textContent = 'Send My Quote Request';
+        alert('There was a problem sending your request. Please email hello@bayougreensnola.com directly.');
+      });
+  });
+</script>
+
+</body>
+</html>
